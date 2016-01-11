@@ -1,6 +1,6 @@
 (function() {
-	// need to find a way to find out if debug is disabled
-	if(!angular.element(document).injector()) {
+	// if debug is disabled
+	if(!angular.element(document.querySelector('.ng-scope')).scope()) {
 		angular.reloadWithDebugInfo();
 	}
 
