@@ -1,6 +1,8 @@
 (function() {
 	// need to find a way to find out if debug is disabled
-	//angular.reloadWithDebugInfo();
+	if(!angular.element(document).injector()) {
+		angular.reloadWithDebugInfo();
+	}
 
 	// select an element in debugging console and run _scope($0)
 	var _scope = function(selector) {
