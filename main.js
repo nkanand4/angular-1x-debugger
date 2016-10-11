@@ -19,4 +19,10 @@
 		window._binder = _binder;
 		window._inj = _inj
 	}
+	window.addEventListener('click', function (evt) {
+	    if (evt.detail === 3) {
+		console.info('Scope: ', _scope(evt.target));
+		console.info('Bind: ', _binder(evt.target));
+	    }
+        });
 }());
